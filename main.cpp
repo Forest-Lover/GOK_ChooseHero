@@ -220,7 +220,7 @@ int main()
                             vector<pair<string, float> >{make_pair("guiguzi", 6.12), make_pair("simayi", 5.55), make_pair("yangyuhuan", 4.01)}, 
                             vector<pair<string, float> >{make_pair("milaidi", 6.06), make_pair("bianque", 5.12), make_pair("huangzhong", 4.01)}); 
     //-----------射手-------------
-    hero_map["luban"] 	= Hero("鲁班", J_ADC, 
+    hero_map["lubanqihao"] 	= Hero("鲁班七号", J_ADC, 
                             vector<pair<string, float> >{make_pair("dunshan", 8.52), make_pair("aguduo", 4.96), make_pair("taiyizhenren", 3.62)}, 
                             vector<pair<string, float> >{make_pair("yingzheng", 3.83), make_pair("nvwa", 2.88), make_pair("lanlingwang", 2.38)}); 
     hero_map["bailishouyue"] = Hero("百里守约", J_ADC, 
@@ -281,13 +281,127 @@ int main()
     hero_map["zhuangzhou"] = Hero("庄周", J_SUP, 
                             vector<pair<string, float> >{make_pair("sunce", 5.42), make_pair("niumo", 4.77), make_pair("wangzhaojun", 4.75)}, 
                             vector<pair<string, float> >{make_pair("ganjiangmoye", 6.31), make_pair("diaochan", 5.56), make_pair("shangguanwaner", 5.46)}); 
+    hero_map["sunbin"] = Hero("孙膑", J_SUP, 
+                            vector<pair<string, float> >{make_pair("niumo", 2.94), make_pair("lvbu", 2.21), make_pair("dianwei", 2.02)}, 
+                            vector<pair<string, float> >{make_pair("dunshan", 6.87), make_pair("gongsunli", 4.14), make_pair("laofuzi", 3.76)}); 
+    hero_map["lianpo"] = Hero("廉颇", J_SUP, 
+                            vector<pair<string, float> >{make_pair("dunshan", 5.40), make_pair("milaidi", 3.17), make_pair("simayi", 2.04)}, 
+                            vector<pair<string, float> >{make_pair("makeboluo", 3.60), make_pair("mengya", 3.49), make_pair("zhuangzhou", 3.23)}); 
+    hero_map["daqiao"] = Hero("大乔", J_SUP, 
+                            vector<pair<string, float> >{make_pair("shenmengxi", 6.58), make_pair("xishi", 4.11), make_pair("makeboluo", 4.04)}, 
+                            vector<pair<string, float> >{make_pair("houyi", 3.96), make_pair("huangzhong", 3.26), make_pair("daji", 3.00)}); 
+    hero_map["lubandashi"] = Hero("鲁班大师", J_SUP, 
+                            vector<pair<string, float> >{make_pair("chengjisihan", 5.26), make_pair("bailixuance", 4.82), make_pair("mingshiyin", 4.68)}, 
+                            vector<pair<string, float> >{make_pair("gaojianli", 5.07), make_pair("zhuangzhou", 4.49), make_pair("direnjie", 4.14)}); 
+    hero_map["zhangfei"] = Hero("张飞", J_SUP, 
+                            vector<pair<string, float> >{make_pair("milaidi", 3.41), make_pair("chengjisihan", 3.34), make_pair("dunshan", 2.30)}, 
+                            vector<pair<string, float> >{make_pair("lan", 3.88), make_pair("diaochan", 3.74), make_pair("mengya", 3.43)}); 
+    hero_map["liuchan"] = Hero("刘禅", J_SUP, 
+                            vector<pair<string, float> >{make_pair("laofuzi", 4.07), make_pair("sunwukong", 4.07), make_pair("mozi", 3.13)}, 
+                            vector<pair<string, float> >{make_pair("zhuangzhou", 3.87), make_pair("wuzetian", 3.12), make_pair("zhenji", 2.83)}); 
+    hero_map["zhongwuyan"] = Hero("钟无艳", J_SUP, 
+                            vector<pair<string, float> >{make_pair("mozi", 3.90), make_pair("buzhihuowu", 2.89), make_pair("sikongzhen", 2.61)}, 
+                            vector<pair<string, float> >{make_pair("jialuo", 5.48), make_pair("lvbu", 3.69), make_pair("ganjiangmoye", 3.06)}); 
+    hero_map["niumo"] = Hero("牛魔", J_SUP, 
+                            vector<pair<string, float> >{make_pair("gaojianli", 3.46), make_pair("ailin", 2.77), make_pair("jialuo", 2.69)}, 
+                            vector<pair<string, float> >{make_pair("zhuangzhou", 4.77), make_pair("diaochan", 4.37), make_pair("xishi", 4.31)}); 
+    hero_map["taiyizhenren"] = Hero("太乙真人", J_SUP, 
+                            vector<pair<string, float> >{make_pair("bailixuance", 4.00), make_pair("gongsunli", 3.56), make_pair("makeboluo", 3.53)}, 
+                            vector<pair<string, float> >{make_pair("mengqi", 5.03), make_pair("houyi", 4.20), make_pair("zhouyu", 4.20)}); 
+    hero_map["jiangziya"] = Hero("姜子牙", J_SUP, 
+                            vector<pair<string, float> >{make_pair("zhenji", 5.88), make_pair("aguduo", 4.56), make_pair("zhouyu", 4.24)}, 
+                            vector<pair<string, float> >{make_pair("shangguanwaner", 6.81), make_pair("yuange", 5.77), make_pair("simayi", 5.47)}); 
+    hero_map["guiguzi"] = Hero("鬼谷子", J_SUP, 
+                            vector<pair<string, float> >{make_pair("caiwenji", 7.14), make_pair("yingzheng", 3.86), make_pair("mingshiyin", 3.78)}, 
+                            vector<pair<string, float> >{make_pair("yixing", 6.12), make_pair("aguduo", 4.82), make_pair("sikongzhen", 4.59)}); 
+    hero_map["liubang"] = Hero("刘邦", J_SUP, 
+                            vector<pair<string, float> >{make_pair("chengjisihan", 3.09), make_pair("yuji", 2.67), make_pair("nezha", 2.49)}, 
+                            vector<pair<string, float> >{make_pair("mengqi", 4.77), make_pair("aguduo", 3.89), make_pair("zhouyu", 3.55)}); 
+    //-----------打野-------------
+    hero_map["lan"]     = Hero("澜", J_JUN, 
+                            vector<pair<string, float> >{make_pair("mengtian", 8.61), make_pair("aguduo", 6.19), make_pair("xishi", 5.92)}, 
+                            vector<pair<string, float> >{make_pair("sikongzhen", 5.89), make_pair("ganjiangmoye", 5.77), make_pair("dianwei", 4.96)}); 
+    hero_map["sunwukong"] = Hero("孙悟空", J_JUN, 
+                            vector<pair<string, float> >{make_pair("luna", 4.11), make_pair("jiangziya", 3.31), make_pair("nakelulu", 3.25)}, 
+                            vector<pair<string, float> >{make_pair("liubei", 5.51), make_pair("liuchan", 4.07), make_pair("pangu", 3.88)}); 
+    hero_map["hanxin"]  = Hero("韩信", J_JUN, 
+                            vector<pair<string, float> >{make_pair("nvwa", 5.28), make_pair("xishi", 4.58), make_pair("yingzheng", 4.01)}, 
+                            vector<pair<string, float> >{make_pair("zhugeliang", 2.83), make_pair("yase", 2.81), make_pair("ailin", 2.59)}); 
+    hero_map["zhaoyun"] = Hero("赵云", J_JUN, 
+                            vector<pair<string, float> >{make_pair("zhangliang", 3.01), make_pair("gongbenwuzang", 1.85), make_pair("liubei", 1.52)}, 
+                            vector<pair<string, float> >{make_pair("luna", 4.93), make_pair("mengya", 3.88), make_pair("diaochan", 2.96)}); 
+    hero_map["lanlingwang"] = Hero("兰陵王", J_JUN, 
+                            vector<pair<string, float> >{make_pair("jialuo", 6.45), make_pair("jiangziya", 4.89), make_pair("zhangliang", 4.16)}, 
+                            vector<pair<string, float> >{make_pair("diaochan", 7.53), make_pair("liyuanfang", 5.84), make_pair("bailishouyue", 5.56)}); 
+    hero_map["liyuanfang"] = Hero("李元芳", J_JUN, 
+                            vector<pair<string, float> >{make_pair("ake", 6.82), make_pair("lanlingwang", 5.84), make_pair("guiguzi", 4.44)}, 
+                            vector<pair<string, float> >{make_pair("dunshan", 5.82), make_pair("direnjie", 4.45), make_pair("gongbenwuzang", 4.11)}); 
+    hero_map["dianwei"] = Hero("典韦", J_JUN, 
+                            vector<pair<string, float> >{make_pair("lan", 4.96), make_pair("gongbenwuzang", 3.65), make_pair("yase", 3.02)}, 
+                            vector<pair<string, float> >{make_pair("bailixuance", 6.68), make_pair("libai", 5.52), make_pair("luna", 4.98)}); 
+    hero_map["jing"]    = Hero("镜", J_JUN, 
+                            vector<pair<string, float> >{make_pair("anqila", 3.15), make_pair("zhongkui", 2.84), make_pair("zhenji", 2.59)}, 
+                            vector<pair<string, float> >{make_pair("sikongzhen", 6.06), make_pair("gongsunli", 4.74), make_pair("bianque", 4.51)}); 
+    hero_map["juyoujing"] = Hero("橘右京", J_JUN, 
+                            vector<pair<string, float> >{make_pair("liubei", 2.75), make_pair("yingzheng", 2.34), make_pair("yunzhongjun", 2.14)}, 
+                            vector<pair<string, float> >{make_pair("aguduo", 3.21), make_pair("sikongzhen", 2.79), make_pair("buzhihuowu", 1.97)}); 
+    hero_map["lixin"]   = Hero("李信", J_JUN, 
+                            vector<pair<string, float> >{make_pair("lvbu", 5.40), make_pair("zhenji", 2.99), make_pair("zhuangzhou", 2.57)}, 
+                            vector<pair<string, float> >{make_pair("dunshan", 4.49), make_pair("yangjian", 3.82), make_pair("xialuote", 3.70)}); 
+    hero_map["libai"]   = Hero("李白", J_JUN, 
+                            vector<pair<string, float> >{make_pair("zhenji", 5.56), make_pair("dianwei", 5.52), make_pair("zhuangzhou", 4.29)}, 
+                            vector<pair<string, float> >{make_pair("zhangliang", 5.30), make_pair("mozi", 4.35), make_pair("hanxin", 3.50)}); 
+    hero_map["nakelulu"] = Hero("娜可露露", J_JUN, 
+                            vector<pair<string, float> >{make_pair("liubei", 5.15), make_pair("wuzetian", 2.98), make_pair("gaojianli", 2.59)}, 
+                            vector<pair<string, float> >{make_pair("libai", 3.88), make_pair("yuange", 3.60), make_pair("sunwukong", 3.25)}); 
+    hero_map["bailixuance"] = Hero("百里玄策", J_JUN, 
+                            vector<pair<string, float> >{make_pair("yingzheng", 6.82), make_pair("dianwei", 6.68), make_pair("ganjiangmoye", 3.87)}, 
+                            vector<pair<string, float> >{make_pair("aguduo", 4.98), make_pair("lubandashi", 4.82), make_pair("direnjie", 4.70)}); 
+    hero_map["yao"]     = Hero("曜", J_JUN, 
+                            vector<pair<string, float> >{make_pair("anqila", 3.23), make_pair("zhenji", 2.76), make_pair("mengtian", 2.22)}, 
+                            vector<pair<string, float> >{make_pair("zhangliang", 4.18), make_pair("bianque", 4.05), make_pair("sikongzhen", 3.43)}); 
+    hero_map["ake"]     = Hero("阿轲", J_JUN, 
+                            vector<pair<string, float> >{make_pair("jialuo", 6.53), make_pair("liubei", 5.94), make_pair("yingzheng", 4.10)}, 
+                            vector<pair<string, float> >{make_pair("simayi", 12.55), make_pair("liyuanfang", 6.82), make_pair("bailishouyue", 6.50)}); 
+    hero_map["gongbenwuzang"] = Hero("宫本武藏", J_JUN, 
+                            vector<pair<string, float> >{make_pair("machao", 5.52), make_pair("diaochan", 5.33), make_pair("sikongzhen", 4.84)}, 
+                            vector<pair<string, float> >{make_pair("wangzhaojun", 8.54), make_pair("zhouyu", 7.26), make_pair("huangzhong", 5.05)}); 
+    hero_map["simayi"]  = Hero("司马懿", J_JUN, 
+                            vector<pair<string, float> >{make_pair("ake", 12.55), make_pair("miyue", 5.85), make_pair("jiangziya", 5.47)}, 
+                            vector<pair<string, float> >{make_pair("pangu", 8.35), make_pair("change", 6.54), make_pair("yixing", 5.55)}); 
+    hero_map["damo"]    = Hero("达摩", J_JUN, 
+                            vector<pair<string, float> >{make_pair("huangzhong", 2.35), make_pair("nvwa", 2.24), make_pair("caiwenji", 2.21)}, 
+                            vector<pair<string, float> >{make_pair("sikongzhen", 4.94), make_pair("liubei", 3.16), make_pair("pangu", 2.94)}); 
+    hero_map["yunzhongjun"] = Hero("云中君", J_JUN, 
+                            vector<pair<string, float> >{make_pair("jiangziya", 3.53), make_pair("ailin", 3.44), make_pair("zhenji", 3.38)}, 
+                            vector<pair<string, float> >{make_pair("mengtian", 5.66), make_pair("makeboluo", 3.99), make_pair("machao", 3.68)}); 
+    hero_map["liubei"]  = Hero("刘备", J_JUN, 
+                            vector<pair<string, float> >{make_pair("sunwukong", 5.51), make_pair("simayi", 4.26), make_pair("damo", 3.16)}, 
+                            vector<pair<string, float> >{make_pair("aguduo", 6.72), make_pair("kai", 5.98), make_pair("ake", 5.94)}); 
+    hero_map["peiqinhu"] = Hero("裴擒虎", J_JUN, 
+                            vector<pair<string, float> >{make_pair("nezha", 5.89), make_pair("liubei", 4.69), make_pair("nvwa", 4.47)}, 
+                            vector<pair<string, float> >{make_pair("milaidi", 5.91), make_pair("houyi", 4.39), make_pair("aguduo", 4.04)}); 
+    hero_map["luna"] = Hero("露娜", J_JUN, 
+                            vector<pair<string, float> >{make_pair("mengtian", 7.56), make_pair("dianwei", 4.98), make_pair("zhaoyun", 4.93)}, 
+                            vector<pair<string, float> >{make_pair("mengqi", 6.21), make_pair("sunwukong", 4.11), make_pair("daji", 4.11)}); 
+    hero_map["aguduo"]  = Hero("阿古朵", J_JUN, 
+                            vector<pair<string, float> >{make_pair("zhangliang", 8.64), make_pair("yangyuhuan", 7.43), make_pair("makeboluo", 7.12)}, 
+                            vector<pair<string, float> >{make_pair("mengya", 8.13), make_pair("zhenji", 7.16), make_pair("lan", 6.19)}); 
+    hero_map["yangjian"] = Hero("杨戬", J_JUN, 
+                            vector<pair<string, float> >{make_pair("lixin", 3.82), make_pair("mengtian", 2.36), make_pair("nvwa", 2.24)}, 
+                            vector<pair<string, float> >{make_pair("zhubajie", 4.77), make_pair("laofuzi", 3.78), make_pair("ailin", 3.31)}); 
+    hero_map["yadianna"] = Hero("雅典娜", J_JUN, 
+                            vector<pair<string, float> >{make_pair("nvwa", 2.08), make_pair("shenmengxi", 1.97), make_pair("jiangziya", 1.84)}, 
+                            vector<pair<string, float> >{make_pair("jialuo", 6.33), make_pair("bianque", 3.86), make_pair("change", 3.25)}); 
+    hero_map["pangu"]   = Hero("盘古", J_JUN, 
+                            vector<pair<string, float> >{make_pair("simayi", 8.35), make_pair("laofuzi", 5.66), make_pair("machao", 4.12)}, 
+                            vector<pair<string, float> >{make_pair("mengya", 6.52), make_pair("zhuangzhou", 3.61), make_pair("zhenji", 3.55)}); 
     /*
-    hero_map[""] = Hero("", J_SUP, 
+    hero_map[""] = Hero("", J_JUN, 
                             vector<pair<string, float> >{make_pair("", ), make_pair("", ), make_pair("", )}, 
                             vector<pair<string, float> >{make_pair("", ), make_pair("", ), make_pair("", )}); 
     */
 
-    /*
     //检查配置
     int ret_check = 0; 
     do {
@@ -315,7 +429,6 @@ int main()
         fprintf(stderr, "配置检查失败! ret:%d\n", ret_check);
         exit(1);
     }
-    */
 
     //初始化配置
     map<pair<string, string>, float> restrain_map;  //英雄克制表 key<A,B>, A克制B vaule为正
@@ -411,6 +524,7 @@ int main()
             //已选列表
             cout << "---已选英雄---：" << endl;
             stringstream ss[S_SIZE];
+            float team_enemy_total_val[S_SIZE] = {0.f};
             for (int i = 0; i < choosed_list.size() && i < SEQUENCE.size(); ++i) {
                 auto &name = choosed_list[i];
                 auto it_res     = restrain_info_map.find(name);
@@ -426,11 +540,12 @@ int main()
                         continue;
                     enemy_total_val += res_info._total_val[side];
                 }
+                team_enemy_total_val[SEQUENCE[i]] += enemy_total_val;
                 ss_tmp << hero_info._Chinese_name << "(" << enemy_total_val << ")";
                 ss[SEQUENCE[i]] << setiosflags(ios::left) << setw(30) << ss_tmp.str() << "\t";
             }
             for (int i = 0; i < S_SIZE; ++i) {
-                cout << "<" << SIDE_STR[i] << ">:" << ss[i].str() << endl;
+                cout << "<" << SIDE_STR[i] << ">:" << ss[i].str() << "total:" << team_enemy_total_val[i] << endl;
             }
             //推荐英雄
             if (cur_side != S_SIZE) {
@@ -453,15 +568,17 @@ int main()
                         break;
                     auto &info_hero = hero_map[kv.first];
                     auto &info_res  = kv.second;
-                    cout << "<" << t_cnt << ">" << info_hero._Chinese_name << ":\t";
+                    stringstream ss_name;
+                    ss_name << "<" << t_cnt << ">"  << info_hero._Chinese_name << ":";
+                    cout << setiosflags(ios::left) << setw(15) << ss_name.str() << "\t";
                     for (size_t i = 0; i < info_res._val_list.size() && i < choosed_list.size() && i < SEQUENCE.size(); ++i) {
                         //跳过己方
                         if (cur_side == SEQUENCE[i])
                             continue;
-                        cout << choosed_list[i] << ":" << info_res._val_list[i] << ",\t";
+                        cout << choosed_list[i] << ":" << setw(5) << info_res._val_list[i] << "\t";
                     }
-                    cout << "敌方:" << info_res._enemy_total_val << "\t";
-                    cout << "友方:" << info_res._aliance_total_val << "\t";
+                    cout << "敌方:" << setw(5) << info_res._enemy_total_val << "\t";
+                    cout << "友方:" << setw(5) << info_res._aliance_total_val << "\t";
                     cout << endl;
                 }
             }
