@@ -268,7 +268,7 @@ int main()
     hero_map["caiwenji"] = Hero("蔡文姬", J_SUP, 
                             vector<pair<string, float> >{make_pair("zhugeliang", 3.93), make_pair("milaidi", 3.92), make_pair("daji", 3.00)}, 
                             vector<pair<string, float> >{make_pair("dunshan", 8.61), make_pair("guiguzi", 7.14), make_pair("zhenji", 4.07)}); 
-    hero_map["yao"]     = Hero("瑶", J_SUP, 
+    hero_map["yaoyao"]   = Hero("瑶", J_SUP, 
                             vector<pair<string, float> >{make_pair("wuzetian", 5.58), make_pair("nezha", 4.30), make_pair("nvwa", 3.62)}, 
                             vector<pair<string, float> >{make_pair("jialuo", 5.18), make_pair("gongbenwuzang", 4.81), make_pair("dunshan", 4.05)}); 
     hero_map["donghuangtaiyi"] = Hero("东皇太一", J_SUP, 
