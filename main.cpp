@@ -497,7 +497,7 @@ int main()
             float   _aliance_total_val      = 0.f;  //友方阵营总克制值
         };
         map<string, RestrainInfo> restrain_info_map;  //所有英雄克制计算值
-        cout << "-----------CHOOSE HERO-----------" << endl;
+        cout << "------------------------------CHOOSE HERO-----------------------------" << endl;
         if (choosed_list.empty()) {
             //TODO 默认英雄
             cout << "默认推荐：。。。" << endl;
@@ -524,7 +524,6 @@ int main()
                 }
             }
             //已选列表
-            cout << "---已选英雄---：" << endl;
             stringstream ss[S_SIZE];
             float team_enemy_total_val[S_SIZE] = {0.f};
             for (int i = 0; i < choosed_list.size() && i < SEQUENCE.size(); ++i) {
@@ -538,14 +537,31 @@ int main()
                 stringstream ss_tmp;
                 float enemy_total_val = 0.f;  //对敌方总克制值
                 for (int side = 0; side < S_SIZE; ++side) {
-                    if (side == SEQUENCE[i])
+                    if (SEQUENCE[i] == side )
                         continue;
                     enemy_total_val += res_info._total_val[side];
                 }
                 team_enemy_total_val[SEQUENCE[i]] += enemy_total_val;
                 ss_tmp << hero_info._Chinese_name << "(" << enemy_total_val << ")";
                 ss[SEQUENCE[i]] << setiosflags(ios::left) << setw(30) << ss_tmp.str() << "\t";
+                //单个英雄克制详情直接输出
+                stringstream ss_res, ss_be_res;
+                for (int j = 0; j < choosed_list.size() && j < SEQUENCE.size(); ++j) {
+                    if (SEQUENCE[i] == SEQUENCE[j])
+                        continue;
+                    auto it = restrain_map.find(make_pair(choosed_list[i], choosed_list[j]));
+                    if (it == restrain_map.end())
+                        continue;
+                    if (it->second > 0) {
+                        ss_res << "\t" << choosed_list[j] << ":" << it->second << endl;
+                    } else if (it->second < 0) {
+                        ss_be_res << "\t" << choosed_list[j] << ":" << it->second << endl;
+                    }
+                }
+                cout << "<<" << hero_info._Chinese_name << ">>(" << name << "):" << endl;;
+                cout << ss_res.str() << ss_be_res.str();
             }
+            cout << "-----------已选英雄-----------" << endl;
             for (int i = 0; i < S_SIZE; ++i) {
                 cout << "<" << SIDE_STR[i] << ">:" << ss[i].str() << "total:" << team_enemy_total_val[i] << endl;
             }
